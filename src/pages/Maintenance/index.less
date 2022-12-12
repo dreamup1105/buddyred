@@ -1,0 +1,165 @@
+.cardWrapper {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 10%;
+  min-width: 120px;
+  max-width: 141px;
+  height: 172px;
+  margin-bottom: 36px;
+  padding: 13px;
+  overflow: hidden;
+  text-decoration: none;
+  vertical-align: middle;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: box-shadow 0.3s, border-color 0.3s;
+
+  &:hover {
+    border-color: transparent;
+    box-shadow: 0 1px 2px -2px rgb(0 0 0 / 16%), 0 3px 6px 0 rgb(0 0 0 / 12%),
+      0 5px 12px 4px rgb(0 0 0 / 9%);
+  }
+
+  &.disabled {
+    background: rgba(102, 102, 102, 0.25);
+  }
+
+  .iconWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 42px;
+    height: 42px;
+    overflow: hidden;
+    color: #fff;
+    line-height: 42px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 100%;
+    .icon {
+      margin-top: 7px;
+      color: #fff !important;
+      font-size: 28px;
+      fill: #fff;
+    }
+  }
+
+  .count {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    overflow: hidden;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    transform: translateY(-50%);
+  }
+
+  .nameWrapper {
+    position: absolute;
+    top: 88px;
+    right: 13px;
+    left: 13px;
+    .title {
+      margin-bottom: 6px;
+      padding-bottom: 6px;
+      color: #fff;
+      font-size: 20px;
+      text-align: left;
+      border-bottom: 1px solid #fff;
+    }
+    .enTitle {
+      color: #fff;
+      font-size: 12px;
+      line-height: 1;
+      p {
+        margin: 0;
+        margin-bottom: 3px;
+      }
+    }
+  }
+}
+
+.cardsWrapper {
+  box-sizing: border-box;
+  min-height: 647px;
+  padding: 35px;
+  background: #fff;
+  .cardsRowWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}
+
+.initMaintenanceWrapper {
+  .btnCancel,
+  .btnSubmit {
+    width: 160px;
+    height: 32px;
+  }
+}
+
+.initPersonName {
+  display: inline-block;
+  padding: 5px 8px;
+  color: #1890ff;
+  border: 1px solid #1890ff;
+  border-radius: 4px;
+}
+
+.downIcon {
+  width: 12px;
+  height: 12px;
+  color: rgba(0, 0, 0, 0.25);
+  font-size: 12px;
+}
+
+.arrow {
+  display: inline-block;
+  align-self: center;
+  width: 76px;
+  margin-bottom: 36px;
+  padding: 0 13px;
+  overflow: hidden;
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 29px;
+  text-align: center;
+  vertical-align: middle;
+  &.transparent {
+    color: rgba(255, 255, 255, 0);
+  }
+}
+
+.staffSelectModal {
+  :global(.ant-form-item) {
+    margin-bottom: 24px;
+  }
+}
+
+.errorLine {
+  background: rgba(255, 77, 79, 0.3);
+}
+
+.maintainReportsWrapper {
+  position: fixed;
+  top: -2000px;
+  left: -2000px;
+  width: 800px;
+  page-break-after: always;
+}
+
+.maintainTable {
+  :global(.ant-table-tbody > tr.ant-table-row:hover > td) {
+    background: #f0f0f0;
+  }
+}
+
+.resonLable {
+  // padding-left: 40px;
+  font-weight: bolder;
+}
+.resonValue {
+  padding-right: 20px;
+}

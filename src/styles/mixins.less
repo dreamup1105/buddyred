@@ -1,0 +1,63 @@
+.textEllipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.borderLeft {
+  &::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 1px;
+    height: 100%;
+    background: #000 !important;
+    content: '';
+  }
+}
+
+.borderBottom {
+  &::before {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: url('../assets/border.png') no-repeat;
+    background-size: 100%;
+    content: '';
+  }
+}
+
+.borderRight {
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    width: 1px;
+    height: 100%;
+    background: #000;
+    content: '';
+  }
+}
+
+.borderTop {
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: url('../assets/border.png') no-repeat;
+    background-size: 100%;
+    content: '';
+  }
+}

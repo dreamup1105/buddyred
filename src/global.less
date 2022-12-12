@@ -1,0 +1,222 @@
+@import '~antd/es/style/themes/default.less';
+@import '~antd/es/transfer/style/index.less';
+@import '~antd/es/typography/style/index.less';
+@import '~antd/es/time-picker/style/index.less';
+@import '~antd/es/upload/style/index.less';
+@import '~antd/es/radio/style/index.less';
+@import '~antd/es/statistic/style/index.less';
+@import '~react-photo-view/dist/index.css';
+@import './styles/print.less';
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.colorWeak {
+  filter: invert(80%);
+}
+
+.ant-layout {
+  min-height: 100vh;
+}
+
+canvas {
+  display: block;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+@media (max-width: @screen-xs) {
+  .ant-table {
+    width: 100%;
+    overflow-x: auto;
+    &-thead > tr,
+    &-tbody > tr {
+      > th,
+      > td {
+        white-space: pre;
+        > span {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+// 兼容IE11
+@media screen and(-ms-high-contrast: active), (-ms-high-contrast: none) {
+  body .ant-design-pro > .ant-layout {
+    min-height: 100vh;
+  }
+}
+
+.settingList {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  .settingListItem {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 4px 16px 4px 0;
+  }
+  .columnName {
+    padding-left: 8px;
+  }
+}
+
+.headerSearchWrapper {
+  margin-bottom: 16px;
+  padding: 24px 24px 0;
+  background: #fff;
+}
+
+.ant-pro-sider {
+  .role-wrapper {
+    padding: 14px;
+    background: #f8fafb;
+  }
+  .role-avator {
+    width: 48px;
+    height: 48px;
+  }
+  .role-name {
+    margin-left: 12px;
+    font-weight: 600;
+    font-size: 16px;
+  }
+  .logo-right {
+    margin-left: 12px;
+  }
+}
+
+.ant-pro-sider.ant-layout-sider-collapsed {
+  .logo-right,
+  .role-name {
+    display: none;
+  }
+  .logo-left {
+    width: 30px !important;
+    height: 30px !important;
+  }
+  .role-avator {
+    width: 32px !important;
+    height: 32px !important;
+  }
+  .role-wrapper {
+    padding-top: 10px !important;
+    padding-right: 0 !important;
+    padding-bottom: 10px !important;
+    padding-left: 0 !important;
+  }
+  .ant-pro-sider-logo {
+    padding: 0;
+  }
+}
+
+// 左侧菜单
+.ant-layout-sider {
+  background: #2a3666 !important;
+  .ant-pro-sider-collapsed-button {
+    border-top: none !important;
+  }
+  .anticon {
+    color: #10acdc;
+  }
+
+  .ant-pro-menu-item {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .ant-menu-item {
+    transition: 0.1s color linear;
+    &:hover {
+      .ant-pro-menu-item {
+        color: #fff;
+      }
+    }
+  }
+
+  .ant-menu-submenu {
+    &:hover {
+      .ant-menu-submenu-arrow {
+        color: #fff !important;
+      }
+    }
+  }
+
+  .ant-menu-submenu-selected {
+    div.ant-menu-submenu-title {
+      .ant-pro-menu-item {
+        color: #fff;
+      }
+      .anticon {
+        color: #fff;
+      }
+    }
+    .ant-menu-submenu-arrow {
+      color: #fff;
+    }
+  }
+
+  .ant-menu-item-selected {
+    .ant-pro-menu-item-title {
+      color: #fff;
+    }
+    .anticon {
+      color: #fff;
+    }
+  }
+
+  .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+    background: #10acdc;
+  }
+
+  .ant-menu-item:active,
+  .ant-menu-submenu-title:active {
+    background: #10acdc;
+  }
+
+  .ant-menu-submenu-arrow {
+    color: rgba(255, 255, 255, 0.7);
+  }
+}
+
+// 全局Modal
+.ant-modal {
+  .ant-modal-content {
+    .ant-modal-close-x {
+      color: #fff !important;
+    }
+    .ant-modal-header {
+      .ant-modal-title {
+        color: #fff !important;
+      }
+
+      background: @primary-color !important;
+    }
+  }
+  &.delete-modal {
+    .ant-modal-header {
+      background: #ff4d4f !important;
+    }
+  }
+}
+
+// 时间选择为12小时制时不显示最后的AM与PM
+.timeUse12Hours {
+  .ant-picker-time-panel-column:last-child {
+    display: none;
+  }
+}

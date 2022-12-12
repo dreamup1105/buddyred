@@ -1,0 +1,231 @@
+@import '~antd/es/style/themes/default.less';
+@import '../../styles/mixins.less';
+@import '../../utils/utils.less';
+
+.wrapper {
+  .headerSearchWrapper {
+    margin-bottom: 16px;
+    padding: 24px;
+    background: #fff;
+
+    .iconSpread {
+      margin-top: 4px;
+      margin-left: 16px;
+    }
+  }
+  .statisticWrapper {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .alertWrapper {
+    padding: 16px 24px;
+    background: #fff;
+  }
+}
+
+.versionOptionWrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding-top: 10px;
+  .versionOption {
+    display: inline-block;
+    width: 180px;
+    height: 90px;
+    line-height: 90px;
+    text-align: center;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    &.active,
+    &:hover {
+      color: @primary-color;
+      border-color: @primary-color;
+    }
+
+    &.active {
+      position: relative;
+    }
+  }
+}
+
+.equipmentWrapper {
+  display: grid;
+  grid-template-rows: 32px 36px repeat(6, 18px);
+  grid-template-columns: 30% 20% 25% 25%;
+  box-sizing: border-box;
+  width: 330px;
+  // max-height: 210px;
+  margin: 12px auto 0;
+  overflow: hidden;
+  color: #000 !important;
+  font-size: 12px;
+  font-family: Microsoft Yahei !important;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #000;
+  // border-top: none;
+  // border-bottom: none;
+
+  div {
+    position: relative;
+    overflow: hidden;
+    &:not(.qrcodeWrapper) {
+      .borderBottom();
+    }
+    
+    // border-top: 1pt solid #000;
+    // border-right: 1pt solid #000;
+    // background: #fff;
+  }
+}
+
+.equipmentInfoWrapper {
+  padding: 27px 16px 0;
+  .titleWrapper {
+    position: relative;
+    text-align: center;
+    h1 {
+      margin-bottom: 6px;
+      color: #000;
+      font-size: 24px;
+    }
+    h4 {
+      margin-bottom: 26px;
+      color: #000;
+      font-weight: normal;
+      font-size: 20px;
+    }
+  }
+
+  .qrcodeWrapper {
+    position: absolute;
+    top: 10px;
+    left: 6px;
+  }
+
+  .primaryWrapper {
+    :global(.ant-descriptions-item-label) {
+      width: 100px;
+      font-weight: 600;
+      text-align: center;
+    }
+  }
+
+  .tableWrapper {
+    img {
+      display: inline-block;
+      width: 76px;
+      height: 76px;
+    }
+    :global(.ant-descriptions-item-label) {
+      width: 100px;
+      padding-right: 0;
+      padding-left: 0;
+      font-weight: 600;
+      text-align: center;
+      background: #f5f9fb;
+    }
+  }
+}
+
+.euqipmentImportModalWrapper {
+  .excelIconWrapper {
+    text-align: center;
+    .excelIcon {
+      font-size: 64px;
+    }
+  }
+  .excelWrapper {
+    text-align: center;
+    border-left: 1px solid #f0f0f0;
+    a {
+      display: inline-block;
+      margin: 0 auto;
+    }
+    p {
+      margin-top: 10px;
+      padding-right: 30px;
+      padding-left: 30px;
+      color: #f50;
+      font-size: 12px;
+    }
+  }
+}
+
+.certBlock {
+  padding-top: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px dashed #d9d9d9;
+}
+
+:global(.ant-result) {
+  padding-top: 0;
+}
+
+.timelineTitle {
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.timeSubtitle {
+  color: #333;
+  font-size: 12px;
+}
+
+.timelineTime {
+  color: #a6b2c1;
+  font-size: 12px;
+}
+
+.equipmentTableTitle {
+  span {
+    color: red;
+  }
+}
+
+.wrapTable {
+  width: 330px;
+  border-color: #333;
+  margin: 12px auto 0;
+  font-family: Microsoft Yahei !important;
+  text-align: center;
+  border-collapse: collapse;
+  display: grid;
+  td {
+    padding: 1px 6px;
+    line-height: 14px;
+    font-size: 12px;
+    text-align: left;
+    min-width: 70px;
+    margin-left: -2px;
+    margin-top: -2px;
+    border: 1px solid #333;
+  }
+  .tableTitle {
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+    font-weight: bolder;
+  }
+  .table-item1 {
+    height: 36px;
+  }
+  // .table-label {
+  //   min-width: 70px;
+  // }
+  .erweima {
+    text-align: center;
+  }
+}
+
+.hispital-logo {
+  float: left;
+  margin-left: 5px;
+  margin-top: 5px;
+  margin-right: 10px;
+  height: 18px;
+}

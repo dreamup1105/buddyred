@@ -1,0 +1,224 @@
+.initRepairWrapper {
+  padding-bottom: 80px;
+  .btnCancel,
+  .btnSubmit {
+    width: 160px;
+    height: 32px;
+  }
+}
+
+.partsWrapper {
+  border: 1px solid #1890ff;
+  &.maintenance {
+    border-color: #0d74c6;
+    border-top: none;
+    .partsTitle {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      color: #000;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 36px;
+      text-align: center;
+      background: #f5f9fb;
+      border-top: 1px solid #1890ff;
+    }
+    .cellLabel {
+      // background: #f5f9fb;
+      color: #000;
+      font-weight: 500;
+    }
+    .cell {
+      padding: 8px;
+      border-right-color: #0d74c6;
+      border-bottom-color: #0d74c6;
+    }
+    .fee {
+      height: 36px;
+      .cell {
+        height: 36px;
+        border-right: none;
+        border-bottom: none;
+      }
+      .cellLabel {
+        text-align: center;
+        border-right: 1px solid #0d74c6;
+      }
+    }
+  }
+  .row {
+    .cell:last-child {
+      border-right: none;
+    }
+  }
+}
+
+.cell {
+  // line-height: 36px;
+  padding: 7px 5px;
+  text-align: center;
+  border-right: 1px solid #1890ff;
+  border-bottom: 1px solid #1890ff;
+}
+
+.cellLabel {
+  // background: rgba(24, 144, 255, 0.1);
+}
+
+.repairReport {
+  color: #000;
+  font-family: Microsoft Yahei !important;
+  background: #fff;
+  box-shadow: 2px 0 6px 0 rgba(0, 0, 0, 0.16);
+  .inner {
+    padding-top: 24px;
+    padding-right: 30px;
+    padding-left: 30px;
+    background: #fff;
+  }
+  .header {
+    position: relative;
+    height: 80px;
+    background: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+    .title {
+      position: absolute;
+      top: 50%;
+      left: 30px;
+      background: #fff;
+      transform: translateY(-50%);
+      h5 {
+        margin: 0;
+        color: #0071bc;
+        font-weight: bold;
+        font-size: 18px;
+        background: #fff;
+      }
+      span {
+        color: rgba(0, 0, 0, 0.65);
+        font-size: 10px;
+      }
+    }
+    .logo {
+      position: absolute;
+      top: 50%;
+      right: 30px;
+      width: 90px;
+      background: #fff;
+      transform: translateY(-50%);
+    }
+  }
+
+  .base {
+    background: #fff;
+    .cell {
+      text-align: left;
+      border: none;
+    }
+  }
+
+  .params {
+    margin-top: 24px;
+    margin-bottom: 12px;
+    background: #fff;
+    border: 1px solid #1890ff;
+    border-right: none;
+    border-bottom: none;
+  }
+
+  .desc {
+    margin-bottom: 12px;
+    background: #fff;
+    border: 1px solid #1890ff;
+    .descTitle {
+      height: 36px;
+      color: #000;
+      font-size: 16px;
+      line-height: 36px;
+      text-align: center;
+      background: rgba(24, 144, 255, 0.1);
+      border-bottom: 1px solid #1890ff;
+    }
+    .descContent {
+      box-sizing: border-box;
+      min-height: 110px;
+      padding: 10px;
+    }
+    .fee {
+      height: 36px;
+      background: #fff;
+      border-top: 1px solid #1890ff;
+
+      .cell {
+        height: 36px;
+        padding: 0;
+        padding-right: 15px;
+        line-height: 36px;
+        text-align: right;
+        border-right: none;
+        border-bottom: none;
+      }
+      .cellLabel {
+        text-align: center;
+        border-right: 1px solid #1890ff;
+      }
+    }
+  }
+
+  .appendix {
+    padding-bottom: 20px;
+    background: #fff;
+    h6 {
+      // margin-bottom: 16px;
+      color: #0071bc;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .partsTitle {
+      height: 36px;
+      color: #000;
+      font-size: 16px;
+      line-height: 36px;
+      text-align: center;
+      background: rgba(24, 144, 255, 0.1);
+    }
+    .fee {
+      height: 36px;
+      .cell {
+        height: 36px;
+        border-right: none;
+        border-bottom: none;
+      }
+      .cellLabel {
+        text-align: center;
+        border-right: 1px solid #1890ff;
+      }
+    }
+  }
+}
+
+.equipmentImage {
+  width: 100%;
+  height: 100%;
+}
+
+.repairReportsWrapper {
+  position: fixed;
+  top: -2000px;
+  left: -2000px;
+  width: 800px;
+  overflow: hidden;
+}
+
+.checkerName {
+  padding: 10px 0;
+  text-align: right;
+}
+
+.resonLable {
+  font-weight: bolder;
+}
+.resonValue {
+  padding-right: 20px;
+}

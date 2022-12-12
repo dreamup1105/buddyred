@@ -1,0 +1,195 @@
+@import '~antd/es/style/themes/default.less';
+
+@pro-header-hover-bg: rgba(0, 0, 0, 0.025);
+
+.menu {
+  :global(.anticon) {
+    margin-right: 8px;
+  }
+  :global(.ant-dropdown-menu-item) {
+    min-width: 160px;
+  }
+}
+
+.left {
+  p {
+    margin-left: 7px;
+    color: #0d74c6;
+    font-size: 24px;
+  }
+}
+
+.right {
+  display: flex;
+  float: right;
+  height: 48px;
+  margin-left: auto;
+  overflow: hidden;
+  .action {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 12px;
+    color: @primary-color;
+    font-size: 22px;
+    cursor: pointer;
+    transition: all 0.3s;
+    > span {
+      vertical-align: middle;
+    }
+    &:hover {
+      color: #fff;
+      background: @primary-color;
+      span {
+        color: #fff;
+      }
+    }
+    &:global(.opened) {
+      background: @pro-header-hover-bg;
+    }
+
+    .name {
+      font-size: 14px;
+    }
+
+    .team {
+      font-size: 18px;
+    }
+  }
+  .search {
+    padding: 0 12px;
+    &:hover {
+      background: transparent;
+    }
+  }
+  .account {
+    .avatar {
+      margin: ~'calc((@{layout-header-height} - 24px) / 2)' 0;
+      margin-right: 8px;
+      color: @primary-color;
+      vertical-align: top;
+      background: rgba(255, 255, 255, 0.85);
+    }
+  }
+}
+
+.dark {
+  .action {
+    color: rgba(255, 255, 255, 0.85);
+    > span {
+      color: rgba(255, 255, 255, 0.85);
+    }
+    &:hover,
+    &:global(.opened) {
+      background: @primary-color;
+    }
+  }
+}
+
+:global(.ant-pro-global-header) {
+  .dark {
+    .action {
+      color: @text-color;
+      > span {
+        color: @text-color;
+      }
+      &:hover {
+        color: rgba(255, 255, 255, 0.85);
+        > span {
+          color: rgba(255, 255, 255, 0.85);
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: @screen-md) {
+  :global(.ant-divider-vertical) {
+    vertical-align: unset;
+  }
+  .name {
+    display: none;
+  }
+  .right {
+    position: absolute;
+    top: 0;
+    right: 12px;
+    .account {
+      .avatar {
+        margin-right: 0;
+      }
+    }
+    .search {
+      display: none;
+    }
+  }
+}
+
+.noticeWrapper {
+  // padding: 10px 10px 0;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 6px 16px -8px rgba(0, 0, 0, 0.08),
+    0 9px 28px 0 rgba(0, 0, 0, 0.05), 0 12px 48px 16px rgba(0, 0, 0, 0.03);
+}
+
+.noticeBottomBar {
+  height: 46px;
+  line-height: 46px;
+  text-align: center;
+  border-top: 1px solid #f0f0f0;
+}
+
+.noticeBottomBarRight {
+  border-left: 1px solid #f0f0f0;
+  cursor: pointer;
+}
+
+.noticeBottomBarLeft {
+  cursor: pointer;
+}
+
+.loginHeaderWrapper {
+  width: 100%;
+  height: 48px;
+  padding: 0 16px;
+  line-height: 48px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 1px 4px rgb(0 21 41 / 8%);
+  .logo {
+    display: inline-block;
+    height: 32px;
+    vertical-align: middle;
+  }
+  .title {
+    display: inline-block;
+    margin: 0;
+    margin-left: 15px;
+    color: #0d74c6;
+    vertical-align: middle;
+  }
+}
+
+.moveAppWrapper {
+  padding: 10px;
+  text-align: center;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 6px 16px -8px rgba(0, 0, 0, 0.08),
+    0 9px 28px 0 rgba(0, 0, 0, 0.05), 0 12px 48px 16px rgba(0, 0, 0, 0.03);
+}
+.moveAppItem {
+  display: inline-block;
+  margin: 20px;
+  text-align: center;
+  div {
+    color: #555;
+    font-size: 14px;
+  }
+}
+.moveAppTip {
+  color: #666;
+  font-size: 12px;
+  text-align: center;
+}

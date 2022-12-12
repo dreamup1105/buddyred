@@ -1,0 +1,50 @@
+.progressWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.descrptionColumn {
+  display: inline-block;
+  width: 100px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.date-picker-row {
+  position: relative;
+  z-index: 1;
+}
+.date-picker-green {
+  position: relative;
+  z-index: 1;
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 2px);
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    background-color: #1890ff;
+    border-radius: 50%;
+    content: '';
+  }
+}
+
+.date-picker-orange {
+  position: relative;
+  z-index: 1;
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 2px);
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    background-color: orange;
+    border-radius: 50%;
+    content: '';
+  }
+}

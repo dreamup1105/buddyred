@@ -1,0 +1,399 @@
+@section: rgba(0, 113, 188, 0.2);
+
+.dashboardContainer {
+  box-sizing: border-box;
+  width: 2560px;
+  height: 1440px;
+  padding-top: 104px;
+  overflow: hidden;
+  background-color: rgb(2, 4, 15);
+  transform-origin: left top;
+  .header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 127px;
+    background: url('../../assets/dashboard/header.png') no-repeat;
+    background-size: 100%;
+    .title {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      color: transparent;
+      font-weight: 700;
+      font-size: 36px;
+      background: linear-gradient(
+        to bottom,
+        #00f7fa 50%,
+        #0071bc 20%,
+        #0ebedd 30%
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      transform: translate3d(-50%, -50%, 0);
+    }
+    h6 {
+      position: absolute;
+      bottom: 5px;
+      left: 50%;
+      color: #0ebedd;
+      font-size: 16px;
+      transform: translateX(-50%);
+    }
+  }
+
+  .contentContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 2488px;
+    margin: 0 auto;
+    padding-bottom: 36px;
+    .left,
+    .right,
+    .center {
+      flex: none;
+      .centerTop {
+        position: relative;
+        height: 174px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: @section;
+        .centerInner {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 100%;
+          transform: translate3d(-50%, -50%, 0);
+        }
+        .itemCenterTopStat {
+          position: relative;
+          text-align: center;
+          &::after {
+            position: absolute;
+            top: 15%;
+            right: 0;
+            display: block;
+            width: 1px;
+            height: 70%;
+            background: #b6f1ff;
+            content: '';
+          }
+          &:last-child {
+            &::after {
+              display: none;
+            }
+          }
+          div {
+            color: #b6f1ff;
+            font-weight: 700;
+            font-size: 40px;
+          }
+          h6 {
+            margin-bottom: 15px;
+            color: #9ad5ef;
+            font-size: 23px;
+          }
+        }
+      }
+      .centerInspectionChartContainer,
+      .centerMaintainChartContainer,
+      .centerRepairChartContainer {
+        position: relative;
+        height: 354px;
+        margin-top: 21px;
+        padding: 10px 32px;
+        overflow: hidden;
+        background-color: @section;
+        .title {
+          margin: 0;
+          font-size: 26px;
+
+          img {
+            display: inline-block;
+            width: 26px;
+            height: 26px;
+            margin-right: 20px;
+            vertical-align: middle;
+          }
+        }
+      }
+      .centerInspectionChartContainer {
+        .title {
+          margin-bottom: 15px;
+          color: #8954ef;
+        }
+      }
+      .centerMaintainChartContainer {
+        .title {
+          color: #0fe18a;
+        }
+      }
+      .centerRepairChartContainer {
+        .title {
+          color: #facd20;
+        }
+      }
+    }
+    .left {
+      width: 634px;
+      .top {
+        position: relative;
+        height: 424px;
+        padding: 10px 32px;
+        background-color: @section;
+        .title {
+          margin: 0;
+          color: #f4406b;
+          font-size: 26px;
+          img {
+            display: inline-block;
+            width: 26px;
+            height: 26px;
+            margin-right: 20px;
+            vertical-align: middle;
+          }
+        }
+        .topInner {
+          margin-top: 40px;
+        }
+        .cardItem {
+          position: relative;
+          width: 275px;
+          height: 130px;
+          text-align: center;
+          background: rgba(0, 113, 188, 0.2);
+          .cardItemInner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate3d(-50%, -50%, 0);
+            h6 {
+              margin: 0;
+              font-size: 25px;
+            }
+            div {
+              color: #fff;
+              font-size: 40px;
+            }
+          }
+        }
+        .cardItem1 {
+          h6 {
+            color: #03c591;
+          }
+        }
+        .cardItem2 {
+          h6 {
+            color: #d19198;
+          }
+        }
+        .cardItem3 {
+          h6 {
+            color: #f3af43;
+          }
+        }
+        .cardItem4 {
+          h6 {
+            color: #2ac1f7;
+          }
+        }
+      }
+      .middle,
+      .bottom {
+        position: relative;
+        // height: 853px;
+        height: 440px;
+        margin-top: 21px;
+        padding: 10px 32px;
+        overflow: hidden;
+        background-color: @section;
+        .title {
+          margin: 0;
+          margin-bottom: 20px;
+          color: #f4406b;
+          font-size: 26px;
+          img {
+            display: inline-block;
+            width: 26px;
+            height: 26px;
+            margin-right: 20px;
+            vertical-align: middle;
+          }
+        }
+        .middleInner {
+          margin-top: 20px;
+          // position: absolute;
+          // top: 50%;
+          // left: 50%;
+          // width: 100%;
+          // height: 600px;
+          // transform: translate3d(-50%, -50%, 0);
+        }
+      }
+      .bottom {
+        height: 410px;
+      }
+    }
+
+    .right {
+      position: relative;
+      width: 634px;
+      // height: 1296px;
+      height: 1316px;
+      overflow: hidden;
+      .top {
+        position: relative;
+        height: 202px;
+        padding: 10px 32px;
+        background-color: @section;
+      }
+
+      .bottom {
+        position: relative;
+        height: 1093px;
+        margin-top: 21px;
+        padding: 10px 32px;
+        background-color: @section;
+      }
+      .title {
+        height: 36px;
+        margin: 0;
+        margin-bottom: 20px;
+        color: #f4406b;
+        font-size: 26px;
+        img {
+          display: inline-block;
+          width: 26px;
+          height: 26px;
+          margin-right: 20px;
+          vertical-align: middle;
+        }
+      }
+      .listItem {
+        position: relative;
+        width: 100%;
+        height: 148px;
+        overflow: hidden;
+        border-bottom: 1px solid rgba(44, 150, 209);
+        img {
+          position: absolute;
+          top: 50%;
+          left: 20px;
+          width: 100px;
+          height: 100px;
+          transform: translateY(-50%);
+        }
+        .content {
+          position: absolute;
+          top: 50%;
+          left: 140px;
+          width: 410px;
+          color: #fff;
+          transform: translateY(-50%);
+          .departmentName {
+            font-weight: 700;
+            font-size: 20px;
+          }
+          .equipmentName {
+            font-weight: 700;
+            font-size: 16px;
+          }
+        }
+      }
+      .listItem:last-child {
+        border-bottom: 0;
+      }
+    }
+
+    .center {
+      width: 1180px;
+      padding-top: 18px;
+    }
+  }
+  .leftTopCorner,
+  .rightTopCorner,
+  .leftBottomCorner,
+  .rightBottomCorner {
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    background: transparent;
+  }
+  .leftTopCorner {
+    top: 0;
+    left: 0;
+    border-top: 1px solid rgba(44, 150, 209);
+    border-left: 1px solid rgba(44, 150, 209);
+  }
+  .rightTopCorner {
+    top: 0;
+    right: 0;
+    border-top: 1px solid rgba(44, 150, 209);
+    border-right: 1px solid rgba(44, 150, 209);
+  }
+  .leftBottomCorner {
+    bottom: 0;
+    left: 0;
+    border-bottom: 1px solid rgba(44, 150, 209);
+    border-left: 1px solid rgba(44, 150, 209);
+  }
+  .rightBottomCorner {
+    right: 0;
+    bottom: 0;
+    border-right: 1px solid rgba(44, 150, 209);
+    border-bottom: 1px solid rgba(44, 150, 209);
+  }
+
+  .statNumberWrapper {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 50px;
+    margin-right: 5px;
+    overflow: hidden;
+    font-size: 45px;
+    line-height: 50px;
+    &::after,
+    &::before {
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 23px;
+      background: rgba(0, 113, 188, 0.2);
+      content: '';
+    }
+    &::before {
+      top: 0;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+    }
+    &::after {
+      bottom: 0;
+      border-bottom-right-radius: 4px;
+      border-bottom-left-radius: 4px;
+    }
+  }
+
+  .statTrendWrapper {
+    height: 50px;
+    font-size: 16px !important;
+    line-height: 50px;
+  }
+
+  .engineerAvatarsWrapper {
+    position: relative;
+    text-align: center;
+    .emptyWrapper {
+      margin-top: 50px;
+      color: #fff;
+      font-size: 20px;
+    }
+    p {
+      margin-top: 8px;
+      color: #fff;
+      font-weight: 600;
+      font-size: 18px;
+    }
+  }
+}

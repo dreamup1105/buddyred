@@ -1,0 +1,17 @@
+@import '../../styles/mixins.less';
+
+.required {
+  position: relative;
+  &::before {
+    display: inline-block;
+    margin-right: 4px;
+    color: #ff4d4f;
+    font-size: 14px;
+    content: '*';
+  }
+}
+
+.eventTypeCell {
+  max-width: 200px;
+  .textEllipsis();
+}

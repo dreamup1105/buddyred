@@ -1,0 +1,48 @@
+[
+  {
+    "type": "HEADER",
+    "id": "header",
+    "parentId": "",
+    "properties": {
+      "title": "标题",
+      "subTitle": "二级标题",
+      "logoSrc": ""
+    }
+  },
+  {
+    "type": "CONTEXT",
+    "parentId": "",
+    "id": "context",
+    "children": [
+      {
+        "type": "CONTEXT_ITEM",
+        "id": "",
+        "parentId": "",
+        "properties": {
+          "name": "",
+          "code": "",
+          "contextType": ""
+        }
+      }
+    ]
+  },
+  {
+    "type": "GROUP",
+    "children": [
+      {
+        "type": "BIZ_ITEM",
+        "id": "",
+        "parentId": "",
+        "properties": {
+          "name": "",
+          "details": []
+        }
+      }
+    ],
+    "id": "",
+    "parentId": "",
+    "properties": {
+      "groupName": ""
+    }
+  }
+]

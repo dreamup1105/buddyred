@@ -1,0 +1,47 @@
+.prodTable,
+.modelTable {
+  width: 100%;
+  height: calc(100% - 64px);
+  margin-right: 0;
+  overflow-y: scroll;
+  background: #fff;
+}
+
+.manufacturerTable {
+  width: 100%;
+  height: calc(100% - 64px);
+  overflow-y: scroll;
+}
+
+.bottomTableWrapper {
+  height: 50%;
+  margin-top: 5px;
+}
+
+.prodTableWrapper,
+.modelTableWrapper {
+  position: relative;
+  height: 100%;
+  // background: #fff;
+  padding-bottom: 50px;
+  overflow: hidden;
+  .pagination {
+    bottom: 8px;
+  }
+}
+
+.manufacturerTableWrapper {
+  position: relative;
+  height: 50%;
+  padding-bottom: 50px;
+  overflow: hidden;
+  // background: #fff;
+  .pagination {
+    bottom: 8px;
+  }
+}
+
+.pagination {
+  position: absolute;
+  right: 25px;
+}

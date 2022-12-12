@@ -1,0 +1,239 @@
+@border-color: #0d74c6;
+
+.editableCell {
+  position: relative;
+}
+
+.editableCellValueWrap {
+  padding: 5px 12px;
+  color: #000;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.editableRow:hover .editableCellValueWrap {
+  padding: 4px 11px;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+}
+
+.editableHeaderTitle {
+  width: 80%;
+  margin: 0 auto;
+  color: #000;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.editableHeaderSubtitle {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 16px;
+}
+
+.editableHeaderLogo {
+  position: absolute;
+  top: 0;
+  left: 30px;
+  // width: 64px;
+  height: 64px;
+}
+
+.editableSystemBottomWrapper {
+  margin-top: 14px;
+
+  .editableDetailCol {
+    border-right: none;
+  }
+
+  .editableItemRow {
+    .editableDetailCol:last-child {
+      border-right: 1px solid @border-color !important;
+    }
+    &:last-child {
+      .editableItemCol,
+      .editableDetailCol {
+        border-bottom: 1px solid @border-color !important;
+      }
+    }
+  }
+}
+
+.editableGroupTitle {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #000;
+  font-weight: 500;
+  font-size: 18px;
+  background: #f5f9fb;
+  border-top: 1px solid @border-color !important;
+  border-right: 1px solid @border-color !important;
+  border-left: 1px solid @border-color !important;
+  .editableCellValueWrap {
+    width: 85%;
+    margin: 0 auto;
+  }
+}
+
+.editableItemRow {
+  min-height: 48px;
+  overflow: hidden;
+}
+
+.editableItemCol {
+  position: relative;
+  padding: 8px;
+  overflow: hidden;
+  background: #f5f9fb !important;
+  border: 1px solid @border-color;
+  border-bottom: none;
+}
+
+.editableDetailCol {
+  position: relative;
+  padding: 8px;
+  border: 1px solid @border-color;
+  border-bottom: none;
+  border-left: none;
+}
+
+// .editableGroupContentWrapper {
+
+// }
+
+.editableGroupWrapper {
+  position: relative;
+  .editableItemRow:last-child {
+    .editableItemCol,
+    .editableDetailCol {
+      border-bottom: 1px solid @border-color;
+    }
+  }
+}
+
+.hideBottomBorder {
+  .editableItemRow:last-child {
+    .editableItemCol,
+    .editableDetailCol {
+      border-bottom: none;
+    }
+  }
+}
+
+.editableDetailColDel {
+  position: relative;
+}
+.editableDetailColDelIcon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.editableGroupOper {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+.editableContextOper {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.editableItemColName,
+.editableItemColDetail {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.editorWrapper {
+  width: 100%;
+  margin: 0 auto 20px;
+  padding-bottom: 56px;
+  overflow: hidden;
+}
+
+.componentHeaderWrapper {
+  position: relative;
+  margin-bottom: 26px;
+}
+
+.componentWrapper {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px dashed #fff;
+  &:hover {
+    border-color: #0170fe;
+    cursor: pointer;
+  }
+}
+
+.componentPreviewWrapper {
+  .editableCellValueWrap {
+    cursor: default;
+  }
+  .editableRow:hover .editableCellValueWrap {
+    padding: 5px 12px;
+    border: none;
+  }
+}
+
+.componentWrapperActive {
+  border: 1px solid #0170fe;
+  &:hover {
+    border: 1px solid #0170fe;
+  }
+}
+
+.canvas {
+  position: relative;
+  padding: 20px;
+  background: #fff;
+}
+
+.topForm {
+  padding-top: 20px;
+}
+
+.bottomToolbar {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box;
+  height: 48;
+  padding: 0 24px;
+  line-height: 48px;
+  text-align: right;
+  background: #fff;
+  border-top: 1px solid #f0f0f0;
+  box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.12),
+    0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+}
+
+.etitorColWrapper {
+  &::-webkit-scrollbar {
+    display: none; /* Chrome Safari */
+  }
+
+  overflow: scroll;
+  border: 1px solid #e5e5e5;
+}
+
+.contextValueWrapper {
+  padding: 5px 0;
+  text-align: left;
+}
+
+.placeholder {
+  width: 100%;
+  height: 100px;
+  color: #d9d9d9;
+  line-height: 100px;
+  text-align: center;
+  border: 1px dashed #d9d9d9;
+}
